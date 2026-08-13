@@ -1,0 +1,8 @@
+feast[redis]==0.65.0
+pandas==2.3.3
+scikit-learn==1.9.0
+redis==7.4.1
+pyarrow==24.0.0
+streamlit==1.61.1
+joblib==1.5.3
+plotly==6.9.0
