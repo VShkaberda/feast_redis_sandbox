@@ -1,0 +1,10 @@
+project: feature_redis_sandbox_repo
+registry: data/registry.db
+provider: local
+offline_store:
+  type: duckdb
+online_store:
+  type: redis
+  connection_string: "172.19.0.2:6379"
+auth:
+    type: no_auth

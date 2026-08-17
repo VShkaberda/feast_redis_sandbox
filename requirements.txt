@@ -1,4 +1,4 @@
-feast[redis]==0.65.0
+feast[duckdb,redis]==0.65.0
 pandas==2.3.3
 scikit-learn==1.9.0
 redis==7.4.1
