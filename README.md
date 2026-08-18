@@ -15,14 +15,14 @@ For this project the following dependencies are required:
 
 ### Redis initialization
 
-Create a network to share with Feast:
+Create a network to connect Redis with RedisInsight :
 ```bash
-docker network create feast-network
+docker network create redis-network
 ```
 
-Start Redis connected to the Feast network:
+Start Redis connected to the Redis network:
 ```bash
-docker run -d --name redis --network feast-network redis
+docker run -d --name redis --network redis-network redis
 ```
 
 To get the IP address of Redis Container: 
