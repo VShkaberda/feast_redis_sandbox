@@ -9,13 +9,13 @@ For this project the following dependencies are required:
 1. Feast. Feature storage. The core of the project.
 2. DuckDB. Used as offline feature storage.
 3. Redis. Used as online feature storage.
-4. Docker. Containerization of the project.
+4. Docker. Run Redis containers.
 5. Streamlit. Framework to turn data scripts into interactive web apps.
 6. Plotly. The interactive graphing library.
 
 ### Redis initialization
 
-Create a network to connect Redis with RedisInsight :
+Create a network to connect Redis with RedisInsight:
 ```bash
 docker network create redis-network
 ```
@@ -72,7 +72,7 @@ feast apply
 
 ### Materialize data into online store
 
-To materializa data into Redis
+To materializa data into Redis:
 ```bash
 cd feature_redis_sandbox_repo/feature_repo
 feast materialize-incremental $(date +%F)
@@ -80,7 +80,7 @@ feast materialize-incremental $(date +%F)
 
 ### Run RedisInsight to inspect Redis
 
-Run RedisInsight in the same network as Redis
+Run RedisInsight in the same network as Redis:
 ```bash
 docker run -d --name redisinsight --network redis-network -p 5540:5540 redis/redisinsight:latest
 ```
@@ -115,7 +115,7 @@ python ./feature_redis_sandbox_repo/train.py
 
 ### Run Streamlit App
 
-To run `streamlit` app simply execute
+To run `streamlit` app execute:
 ```bash
 streamlit run ./feature_redis_sandbox_repo/streamlit_app.py
 ```
