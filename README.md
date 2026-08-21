@@ -102,3 +102,24 @@ To print online features for `order_id` < 20 cross joined with first 2 `client_i
 cd feature_redis_sandbox_repo/feature_repo
 python ./get_online_features.py
 ```
+
+## ML
+
+### Train ML model using features from Feast online store
+
+ML model is a simple linear regression predicting `total_price`
+from features `[client_id, sku_count]`:
+```bash
+python ./feature_redis_sandbox_repo/train.py
+```
+
+### Run Streamlit App
+
+To run `streamlit` app simply execute
+```bash
+streamlit run ./feature_redis_sandbox_repo/streamlit_app.py
+```
+
+A local development server will start, and the interface
+will automatically open in a new tab in the default web browser
+(typically at http://localhost:8501).

@@ -222,3 +222,6 @@ __marimo__/
 
 # Feast
 /feature_redis_sandbox_repo/feature_repo/data/registry.db
+
+# ML
+/feature_redis_sandbox_repo/model.pkl

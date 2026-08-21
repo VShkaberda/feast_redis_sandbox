@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 import os
+from datetime import datetime, timedelta
+
 import pandas as pd
 import numpy as np
-from datetime import datetime, timedelta
 
 
 def generate_orders_dataset(num_rows=1000):

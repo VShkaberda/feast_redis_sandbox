@@ -52,7 +52,7 @@ orders_view = FeatureView(
 # noinspection PyArgumentList
 cities_orders_view = FeatureView(
     name="cities_orders_feature_view",
-    entities=[orders_entity, cities_entity],
+    entities=[orders_entity, clients_entity, cities_entity],
     schema=[
         Field(name="sku_count", dtype=Int64),
         Field(name="total_price", dtype=Float64),
